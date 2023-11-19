@@ -1,0 +1,20 @@
+.populardestinations {
+  .populardestinations__title,
+  .populardestinations__desc {
+    margin-bottom: 3px;
+    text-align: center;
+  }
+
+  .populardestinations__wrapcard {
+    @include flexRow();
+  }
+}
+
+//MOBILE
+@media screen and (max-width: $breakpoint-md) {
+  .populardestinations {
+    .populardestinations__wrapcard {
+      @include flexColum();
+    }
+  }
+}

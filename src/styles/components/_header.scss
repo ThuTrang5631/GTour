@@ -1,0 +1,123 @@
+.header {
+  background-color: $color-black;
+  @include flexRow();
+  justify-content: space-between;
+  padding-block: 26px;
+  // THEM VAO DE LAM FOOTER
+  margin-bottom: 100px;
+
+  .header__logo {
+    img {
+      width: 92px;
+    }
+  }
+
+  .header__menu {
+    @include flexRow();
+  }
+
+  .header__menuitem {
+    margin-right: 17px;
+  }
+
+  .header__menuitemlink {
+    @include textSemiBold($color-white, 13px);
+    &::after {
+      display: inline-block;
+      font-family: "FontAwesome";
+      content: "\f107";
+      width: 8px;
+      margin-left: 8px;
+    }
+  }
+
+  .header__wrapright {
+    @include flexRow();
+  }
+
+  .header__btn {
+    background-color: transparent;
+    width: 13px;
+
+    &:first-child {
+      margin-right: 13px;
+    }
+
+    i {
+      color: $color-white;
+    }
+  }
+
+  .header__button {
+    @include flexRow();
+  }
+
+  .header__btn--shoppingcart {
+    position: relative;
+  }
+
+  .header__cartcount {
+    position: absolute;
+    background-color: $color-red;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    @include textMedium($color-white, 13px);
+    @include flexRow();
+    justify-content: center;
+    align-items: center;
+    top: -6px;
+    right: -15px;
+  }
+
+  .header__submenu {
+    background-color: $color-white;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+    width: 240px;
+    margin-top: 20px;
+    padding-inline: 20px;
+
+    a {
+      @include textMedium($color-black, 13px);
+    }
+
+    .header__submenuitem {
+      padding-block: 10px;
+      border-bottom: 1px solid #dce0e0;
+    }
+  }
+}
+
+// TABLET
+
+@media screen and (max-width: $breakpoint-lg) {
+  .header {
+    padding-inline: 30px;
+
+    .header__menu {
+      display: none;
+    }
+
+    .header__wrapleft {
+      padding-left: 30px;
+    }
+
+    .header__btn {
+      &:first-child {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+//MOBILE
+
+@media screen and (max-width: $breakpoint-md) {
+  .header {
+    .header__wrapleft {
+      padding-left: 0;
+    }
+  }
+}

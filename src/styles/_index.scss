@@ -1,0 +1,85 @@
+@import "./variable";
+@import "./mixin";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/destinationcard";
+@import "./app";
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.padding-inwrap {
+  padding-inline: 90px;
+}
+
+.titleh2 {
+  @include textBold($color-black, 36px);
+  line-height: 46.8px;
+}
+
+.subtitle {
+  @include textMedium($color-gray-subtitle, 15px);
+  line-height: 25.5px;
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .padding-inwrap {
+    padding-inline: 30px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .titleh2 {
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+}

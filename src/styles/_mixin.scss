@@ -1,0 +1,45 @@
+@mixin overflowText($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin textRegular($color, $size, $fontfamily: "'Poppins', sans-serif") {
+  font-weight: 400;
+  color: $color;
+  font-size: $size;
+  font-family: $fontfamily;
+}
+
+@mixin textMedium($color, $size, $fontfamily: "'Poppins', sans-serif") {
+  font-weight: 500;
+  color: $color;
+  font-size: $size;
+  font-family: $fontfamily;
+}
+
+@mixin textSemiBold($color, $size, $fontfamily: "'Poppins', sans-serif") {
+  font-weight: 600;
+  color: $color;
+  font-size: $size;
+  font-family: $fontfamily;
+}
+
+@mixin textBold($color, $size, $fontfamily: "'Poppins', sans-serif") {
+  font-weight: 700;
+  color: $color;
+  font-size: $size;
+  font-family: $fontfamily;
+}
+
+@mixin flexColum {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
