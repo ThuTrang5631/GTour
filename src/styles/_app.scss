@@ -12,6 +12,15 @@
   .articles__wrapcard {
     @include flexRow();
   }
+
+  .bgsection {
+    background-image: url("../../src/assets/bridgeRed.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+  }
 }
 
 //MOBILE

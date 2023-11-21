@@ -17,7 +17,6 @@ import PostCard from "./components/PostCard";
 import postCardImage1 from "./assets/postcardimage1.jpg";
 import postCardImage2 from "./assets/postcardimage2.jpeg";
 import postCardImage3 from "./assets/postcardimage3.jpg";
-import bridgeRedImage from "./assets/bridgeRed.jpg";
 
 const listDestinations = [
   {
@@ -194,7 +193,7 @@ function App() {
           </div>
         }
       </section>
-      <section className="bgsection"></section>
+      <section className="bgsection mb-50"></section>
       <section className="articles padding-inwrap mb-50">
         <h2 className="articles__content titleh2">Articles & Tips</h2>
         <p className="articles__content subtitle mb-50">
