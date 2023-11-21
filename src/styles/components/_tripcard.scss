@@ -1,0 +1,110 @@
+.tripcard {
+  border: 0.5px solid $color-gray-light;
+  border-radius: 5px;
+  width: calc(33.3% - 2px);
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .tripcard__top {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .tripcard__price {
+    position: absolute;
+    bottom: 20px;
+    background-color: $color-red;
+    @include textBold($color-white, 15px);
+    padding: 3px 12px;
+    line-height: 25.5px;
+  }
+
+  .tripcard__image {
+    border-radius: 5px;
+  }
+
+  .tripcard__bottomtitle {
+    @include textBold($color-black, 20px);
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
+
+  .tripcard__tours {
+    @include textRegular($color-black-1, 13px);
+    line-height: 22.1px;
+    margin-bottom: 10px;
+  }
+
+  .tripcard__bottom {
+    padding: 5px 15px 15px;
+  }
+
+  .star__bg {
+    color: $color-blue-star;
+  }
+
+  .tripcard__wrapstars {
+    @include flexRow();
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+      margin-right: 8px;
+    }
+  }
+
+  .tripcard__star {
+    width: 13px;
+  }
+
+  .tripcards__countreview {
+    @include textSemiBold($color-black-1, 12px);
+  }
+
+  .tripcards__daysdesc {
+    @include textRegular($color-black-1, 12px);
+  }
+
+  .tripcards__days {
+    @include flexRow();
+    align-items: center;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .tripcard__bottomreview {
+    @include flexRow();
+    justify-content: space-between;
+  }
+
+  .tripcard__discountprice {
+    text-decoration: line-through;
+    margin-right: 5px;
+    font-weight: 400;
+  }
+
+  .tripcard__sale {
+    background-color: $color-blue-star;
+    @include textSemiBold($color-white, 12px);
+    padding: 10px 7px;
+    border-radius: 50px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    @include flexRow();
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .tripcard {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}

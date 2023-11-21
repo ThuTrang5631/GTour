@@ -1,19 +1,20 @@
-.populardestinations {
-  .populardestinations__title,
-  .populardestinations__desc {
-    margin-bottom: 3px;
+.app {
+  .populardestinations__content,
+  .valuetrips__content {
     text-align: center;
   }
 
-  .populardestinations__wrapcard {
+  .populardestinations__wrapcard,
+  .valuetrips__wrapcard {
     @include flexRow();
   }
 }
 
 //MOBILE
 @media screen and (max-width: $breakpoint-md) {
-  .populardestinations {
-    .populardestinations__wrapcard {
+  .app {
+    .populardestinations__wrapcard,
+    .valuetrips__wrapcard {
       @include flexColum();
     }
   }

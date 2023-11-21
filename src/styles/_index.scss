@@ -4,6 +4,7 @@
 @import "./components/footer";
 @import "./components/destinationcard";
 @import "./app";
+@import "./components/tripcard";
 
 img {
   display: block;
@@ -69,6 +70,10 @@ a {
 .subtitle {
   @include textMedium($color-gray-subtitle, 15px);
   line-height: 25.5px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: $breakpoint-lg) {

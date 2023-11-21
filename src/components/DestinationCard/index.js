@@ -1,3 +1,3 @@
-import DestinationCard from "./DestinatopnCard";
+import DestinationCard from "./DestinationCard";
 
 export default DestinationCard;
