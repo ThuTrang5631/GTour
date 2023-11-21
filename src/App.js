@@ -9,6 +9,15 @@ import TripCard from "./components/TripCard";
 import frenchImage from "./assets/french.jpeg";
 import switzerlandImage from "./assets/Grand Switzerland.jpeg";
 import japanImage from "./assets/Japan.jpeg";
+import ReasonCard from "./components/ReasonCard";
+import reasonImage1 from "./assets/handpickhotel.png";
+import reasonImage2 from "./assets/service.png";
+import reasonImage3 from "./assets/pricegraduatee.png";
+import PostCard from "./components/PostCard";
+import postCardImage1 from "./assets/postcardimage1.jpg";
+import postCardImage2 from "./assets/postcardimage2.jpeg";
+import postCardImage3 from "./assets/postcardimage3.jpg";
+import bridgeRedImage from "./assets/bridgeRed.jpg";
 
 const listDestinations = [
   {
@@ -73,6 +82,48 @@ const listsValueTrip = [
   },
 ];
 
+const listReasonCard = [
+  {
+    src: reasonImage1,
+    title: "Handpicked Hotels",
+    desc: "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa",
+  },
+  {
+    src: reasonImage2,
+    title: "World Class Service",
+    desc: "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa",
+  },
+  {
+    src: reasonImage3,
+    title: "Best Price Guarantee",
+    desc: "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa",
+  },
+];
+
+const listArticle = [
+  {
+    src: postCardImage1,
+    href: "https://themes.themegoods.com/grandtour/demo/my-memorial-day-tribute-to-someone-who-told-me-to-travel/",
+    title: "Memorial Day to Someone Told Me to Travel",
+    desc: "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...",
+    dates: "December 10, 2016",
+  },
+  {
+    src: postCardImage2,
+    href: "https://themes.themegoods.com/grandtour/demo/7-tips-for-nomads-on-a-budget/",
+    title: "7 Tips For Nomads On A Budget Trips",
+    desc: "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...",
+    dates: "December 10, 2016",
+  },
+  {
+    src: postCardImage3,
+    href: "https://themes.themegoods.com/grandtour/demo/taking-a-travel-blog-victory-lap/",
+    title: "Taking A Travel Blog Victory Lap",
+    desc: "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...",
+    dates: "December 10, 2016",
+  },
+];
+
 function App() {
   return (
     <div className="app">
@@ -119,6 +170,47 @@ function App() {
                 starsBg={item.starsBg}
                 discountBeforePrice={item.discountBeforePrice}
               ></TripCard>
+            );
+          })}
+        </div>
+      </section>
+      <section className="whychooseus padding-inwrap mb-50">
+        <h2 className="whychooseus__content titleh2">Why Choose Us</h2>
+        <p className="whychooseus__content subtitle mb-50">
+          Here are reasons you should plan trip with us
+        </p>
+        {
+          <div className="whychooseus__wrapcard">
+            {listReasonCard.map((item, index) => {
+              return (
+                <ReasonCard
+                  key={index}
+                  title={item.title}
+                  src={item.src}
+                  desc={item.desc}
+                ></ReasonCard>
+              );
+            })}
+          </div>
+        }
+      </section>
+      <section className="bgsection"></section>
+      <section className="articles padding-inwrap mb-50">
+        <h2 className="articles__content titleh2">Articles & Tips</h2>
+        <p className="articles__content subtitle mb-50">
+          Explore some of the best tips from around the world
+        </p>
+        <div className="articles__wrapcard">
+          {listArticle.map((item, index) => {
+            return (
+              <PostCard
+                key={index}
+                src={item.src}
+                title={item.title}
+                desc={item.desc}
+                dates={item.dates}
+                href={item.href}
+              ></PostCard>
             );
           })}
         </div>
