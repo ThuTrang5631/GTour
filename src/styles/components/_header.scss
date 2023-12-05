@@ -1,10 +1,7 @@
 .header {
-  background-color: $color-black;
   @include flexRow();
   justify-content: space-between;
   padding-block: 26px;
-  // THEM VAO DE LAM FOOTER
-  margin-bottom: 100px;
 
   .header__logo {
     img {

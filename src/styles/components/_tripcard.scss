@@ -15,11 +15,19 @@
 
   .tripcard__price {
     position: absolute;
-    bottom: 20px;
+
     background-color: $color-red;
     @include textBold($color-white, 15px);
     padding: 3px 12px;
     line-height: 25.5px;
+  }
+
+  .modal__price {
+    top: 70px;
+  }
+
+  .card__price {
+    bottom: 20px;
   }
 
   .tripcard__image {
@@ -46,6 +54,10 @@
     color: $color-blue-star;
   }
 
+  .star__notbg {
+    color: $color-white;
+  }
+
   .tripcard__wrapstars {
     @include flexRow();
     flex-wrap: wrap;
@@ -54,6 +66,10 @@
     li {
       margin-right: 8px;
     }
+  }
+
+  .fa-clock {
+    color: $color-black;
   }
 
   .tripcard__star {
@@ -100,6 +116,8 @@
     align-items: center;
   }
 }
+
+//MOBILE
 
 @media screen and (max-width: $breakpoint-md) {
   .tripcard {

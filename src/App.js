@@ -1,132 +1,111 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import DestinationCard from "./components/DestinationCard";
-import tokyoImage from "./assets/Tokyo.jpg";
-import seoulImage from "./assets/Seoul.jpg";
-import parisImage from "./assets/Paris.jpg";
-import londonImage from "./assets/London.jpg";
 import TripCard from "./components/TripCard";
-import frenchImage from "./assets/french.jpeg";
-import switzerlandImage from "./assets/Grand Switzerland.jpeg";
-import japanImage from "./assets/Japan.jpeg";
 import ReasonCard from "./components/ReasonCard";
-import reasonImage1 from "./assets/handpickhotel.png";
-import reasonImage2 from "./assets/service.png";
-import reasonImage3 from "./assets/pricegraduatee.png";
 import PostCard from "./components/PostCard";
-import postCardImage1 from "./assets/postcardimage1.jpg";
-import postCardImage2 from "./assets/postcardimage2.jpeg";
-import postCardImage3 from "./assets/postcardimage3.jpg";
-
-const listDestinations = [
-  {
-    href: "https://themes.themegoods.com/grandtour/demo/destination/tokyo/",
-    title: "Tokyo",
-    backgroundImage: tokyoImage,
-  },
-  {
-    href: "https://themes.themegoods.com/grandtour/demo/destination/seoul/",
-    title: "Seoul",
-    backgroundImage: seoulImage,
-  },
-  {
-    href: "https://themes.themegoods.com/grandtour/demo/destination/paris/",
-    title: "Paris",
-    backgroundImage: parisImage,
-  },
-  {
-    href: "https://themes.themegoods.com/grandtour/demo/destination/london/",
-    title: "London",
-    backgroundImage: londonImage,
-  },
-];
-
-const listsValueTrip = [
-  {
-    src: frenchImage,
-    price: "$5,000",
-    title: "French Autumn",
-    desc: "City Tours, Urban",
-    isDiscount: false,
-    href: "https://themes.themegoods.com/grandtour/demo/tour/french-autumn/",
-    countReviews: "4 Reviews",
-    days: "5",
-    isStarBg: true,
-    starsBg: 4,
-  },
-  {
-    src: switzerlandImage,
-    price: "$6,000",
-    title: "Grand Switzerland",
-    desc: "Shopping, Mountain, Snow & Ice",
-    isDiscount: false,
-    href: "https://themes.themegoods.com/grandtour/demo/tour/french-autumn/",
-    countReviews: "4 Reviews",
-    days: "6",
-    isStarBg: true,
-    starsBg: 4,
-  },
-  {
-    src: japanImage,
-    discountBeforePrice: "$3,000",
-    price: "$2,500",
-    title: "Discover Japan",
-    desc: "City Tours, Iconic",
-    isDiscount: true,
-    href: "https://themes.themegoods.com/grandtour/demo/tour/french-autumn/",
-    countReviews: "4 Reviews",
-    days: "5",
-    isStarBg: true,
-    starsBg: 4,
-  },
-];
-
-const listReasonCard = [
-  {
-    src: reasonImage1,
-    title: "Handpicked Hotels",
-    desc: "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa",
-  },
-  {
-    src: reasonImage2,
-    title: "World Class Service",
-    desc: "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa",
-  },
-  {
-    src: reasonImage3,
-    title: "Best Price Guarantee",
-    desc: "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa",
-  },
-];
-
-const listArticle = [
-  {
-    src: postCardImage1,
-    href: "https://themes.themegoods.com/grandtour/demo/my-memorial-day-tribute-to-someone-who-told-me-to-travel/",
-    title: "Memorial Day to Someone Told Me to Travel",
-    desc: "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...",
-    dates: "December 10, 2016",
-  },
-  {
-    src: postCardImage2,
-    href: "https://themes.themegoods.com/grandtour/demo/7-tips-for-nomads-on-a-budget/",
-    title: "7 Tips For Nomads On A Budget Trips",
-    desc: "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...",
-    dates: "December 10, 2016",
-  },
-  {
-    src: postCardImage3,
-    href: "https://themes.themegoods.com/grandtour/demo/taking-a-travel-blog-victory-lap/",
-    title: "Taking A Travel Blog Victory Lap",
-    desc: "Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache...",
-    dates: "December 10, 2016",
-  },
-];
+import Input from "./components/Input";
+import {
+  LISTMONTHS,
+  ALLCATEGORIES,
+  SORTBYDATE,
+  ANYDESTINATIONS,
+  LISTARTICLE,
+  LISTDESTINATIONS,
+  LISTREASONCARD,
+  LISTVALUETRIPS,
+} from "./utils/constants";
+import { useState } from "react";
+import Modal from "./components/Modal";
 
 function App() {
+  const [openSearch, setOpenSearch] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenSearch = (e) => {
+    e.preventDefault();
+    if (openSearch) {
+      setOpenSearch(false);
+    } else {
+      setOpenSearch(true);
+    }
+  };
+
   return (
     <div className="app">
-      <Header></Header>
+      <section className="hero">
+        <iframe
+          className="hero__bg"
+          src="https://www.youtube.com/embed/JPe2mwq96cw?autoplay=1&controls=0&loop=1&mute=1&autohide=0&modestbranding=1"
+          title="YouTube video player"
+          frameBorder="0"
+          allowFullScreen
+        ></iframe>
+        <Header
+          className="hero__header"
+          openModal={() => setOpenModal(true)}
+        ></Header>
+        <div className="hero__content padding-inwrap">
+          <h1 className="hero__title">Where do you want to go?</h1>
+          <p className="hero__desc">
+            Trips, experiences, and places. All in one service.
+          </p>
+          <form className="hero__form">
+            <div className="hero__formcontent hero__formtop">
+              <Input
+                classNameWrap="hero__input"
+                placeholder="Destination, city"
+              >
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </Input>
+              <select className="hero__input hero__select hero__month">
+                {LISTMONTHS.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+              <select className="hero__input hero__select hero__sortbydate">
+                {SORTBYDATE.map((item, index) => {
+                  return <option key={index}>{item}</option>;
+                })}
+              </select>
+              <button className="hero__input hero__btn">Search</button>
+            </div>
+            {openSearch && (
+              <div className="hero__formcontent hero__formbottom">
+                <select className="hero__input hero__select hero__icon">
+                  {ALLCATEGORIES.map((item, index) => {
+                    return <option key={index}>{item}</option>;
+                  })}
+                </select>
+                <select className="hero__input hero__select hero__icon">
+                  {ANYDESTINATIONS.map((item, index) => {
+                    return <option key={index}>{item}</option>;
+                  })}
+                </select>
+                <Input
+                  classNameWrap="hero__input"
+                  placeholder="Max budget ex 500"
+                >
+                  <i className="fa-solid fa-dollar-sign"></i>
+                </Input>
+              </div>
+            )}
+
+            <button
+              onClick={(e) => handleOpenSearch(e)}
+              className="hero__advancedsearch"
+            >
+              {!openSearch ? (
+                <i className="fa-solid fa-chevron-down"></i>
+              ) : (
+                <i className="fa-solid fa-chevron-up"></i>
+              )}
+              Advanced Search
+            </button>
+          </form>
+        </div>
+      </section>
+
       <section className="populardestinations padding-inwrap mb-50">
         <h2 className="populardestinations__content titleh2">
           Popular Destinations
@@ -135,7 +114,7 @@ function App() {
           World's best tourist destinations
         </p>
         <div className="populardestinations__wrapcard">
-          {listDestinations.map((item, index) => {
+          {LISTDESTINATIONS.map((item, index) => {
             return (
               <DestinationCard
                 key={index}
@@ -153,7 +132,7 @@ function App() {
           Best offers trips from us
         </p>
         <div className="valuetrips__wrapcard">
-          {listsValueTrip.map((item, index) => {
+          {LISTVALUETRIPS.map((item, index) => {
             return (
               <TripCard
                 key={index}
@@ -180,7 +159,7 @@ function App() {
         </p>
         {
           <div className="whychooseus__wrapcard">
-            {listReasonCard.map((item, index) => {
+            {LISTREASONCARD.map((item, index) => {
               return (
                 <ReasonCard
                   key={index}
@@ -200,7 +179,7 @@ function App() {
           Explore some of the best tips from around the world
         </p>
         <div className="articles__wrapcard">
-          {listArticle.map((item, index) => {
+          {LISTARTICLE.map((item, index) => {
             return (
               <PostCard
                 key={index}
@@ -216,6 +195,7 @@ function App() {
       </section>
 
       <Footer></Footer>
+      <Modal isOpenModal={openModal} onCloseModal={() => setOpenModal(false)} />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import logoLight from "../../assets/logo__light.png";
+import Dropdown from "react-multilevel-dropdown";
 
-const Header = () => {
+const Header = ({ className, openModal }) => {
   return (
     <>
-      <header className="header padding-inwrap">
+      <header className={`header padding-inwrap ${className}`}>
         <div className="header__wrapleft">
           <a
             className="header__logo"
@@ -84,7 +85,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="header__button">
-            <button className="header__btn">
+            <button className="header__btn" onClick={openModal}>
               <span>
                 <i className="fa-solid fa-bars"></i>
               </span>

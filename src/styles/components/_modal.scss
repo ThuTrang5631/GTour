@@ -1,0 +1,133 @@
+.modal__wrap {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+  align-items: flex-end;
+  backdrop-filter: blur(15px);
+
+  .modal {
+    width: 360px;
+    background-color: $color-modal;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    overflow: auto;
+    height: 100%;
+    flex-direction: column;
+    padding: 35px 40px;
+    position: relative;
+  }
+
+  .modal__btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .fa-x {
+    color: $color-white;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .modal__btnclose {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-red;
+    border-radius: 250px;
+    margin-bottom: 30px;
+  }
+
+  .modal__desc {
+    @include textBold($color-black, 24px);
+  }
+
+  .modal__menuitem {
+    margin-bottom: 20px;
+
+    a {
+      color: $color-black;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal__card {
+    margin-top: 30px;
+  }
+
+  .modal__tripcard {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal__card {
+    margin-bottom: 50px;
+  }
+
+  .modal__social {
+    @include flexRow();
+    align-items: center;
+
+    li {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        i {
+          font-size: 23px;
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  .modal__back {
+    @include textSemiBold($color-black, 14px);
+    margin-bottom: 30px;
+    background: transparent;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  .modal__submenu1 {
+    margin-bottom: 15px;
+  }
+
+  .modal__submenu {
+    margin-left: 20px;
+  }
+}
+
+//MOBILE
+
+@media screen and (max-width: $breakpoint-md) {
+  .modal__wrap {
+    .modal {
+      width: 250px;
+    }
+
+    .modal__image {
+      height: 180px;
+    }
+  }
+}

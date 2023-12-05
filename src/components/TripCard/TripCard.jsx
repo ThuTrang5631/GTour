@@ -9,6 +9,8 @@ const TripCard = ({
   days,
   starsBg,
   href,
+  isModal,
+  className,
 }) => {
   const displayStar = (starsBg) => {
     let list = [];
@@ -17,7 +19,7 @@ const TripCard = ({
       if (i > starsBg) {
         list.push(
           <li className="tripcard__star" key={i}>
-            <i className="fa-regular fa-star"></i>
+            <i className="fa-regular fa-star star__notbg"></i>
           </li>
         );
       } else {
@@ -33,11 +35,19 @@ const TripCard = ({
   };
 
   return (
-    <a className="tripcard" href={href}>
-      <div className="tripcard__top">
-        <img className="tripcard__image" src={src} alt="trip"></img>
-        <div className="tripcard__price">
-          {isDiscount && (
+    <a className={`tripcard ${className ? className : ""}`} href={href}>
+      <div className="tripcard__top" style={isModal && { marginBottom: "0" }}>
+        <img
+          className={`tripcard__image ${isModal ? "modal__image" : ""}`}
+          src={src}
+          alt="trip"
+        ></img>
+        <div
+          className={`tripcard__price ${
+            isModal ? "modal__price" : "card__price"
+          }`}
+        >
+          {discountBeforePrice && (
             <span className="tripcard__discountprice">
               {discountBeforePrice}
             </span>
@@ -46,20 +56,32 @@ const TripCard = ({
         </div>
         {isDiscount && <span className="tripcard__sale">Sale</span>}
       </div>
-      <div className="tripcard__bottom">
-        <h4 className="tripcard__bottomtitle">{title}</h4>
-        <p className="tripcard__tours">{desc}</p>
+      <div
+        className="tripcard__bottom"
+        style={isModal && { position: "absolute", bottom: "-5px" }}
+      >
+        <h4
+          className={"tripcard__bottomtitle"}
+          style={isModal && { color: "#ffffff" }}
+        >
+          {title}
+        </h4>
+        {desc && <p className="tripcard__tours">{desc}</p>}
         <div className="tripcard__bottomreview">
           <ul className="tripcard__wrapstars">
             {displayStar(starsBg)}
-            <li className="tripcards__countreview">{countReviews}</li>
+            {countReviews && (
+              <li className="tripcards__countreview">{countReviews}</li>
+            )}
           </ul>
-          <div className="tripcards__days">
-            <span>
-              <i className="fa-regular fa-clock"></i>
-            </span>
-            <p className="tripcards__daysdesc">{days} days</p>
-          </div>
+          {days && (
+            <div className="tripcards__days">
+              <span>
+                <i className="fa-regular fa-clock"></i>
+              </span>
+              <p className="tripcards__daysdesc">{days} days</p>
+            </div>
+          )}
         </div>
       </div>
     </a>

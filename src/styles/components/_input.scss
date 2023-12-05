@@ -1,0 +1,25 @@
+.wrapinput {
+  position: relative;
+  display: inline-flex;
+
+  .input {
+    padding: 10px;
+    @include textRegular($color-input, 15px);
+    border: 0.5px solid $color-gray-light;
+    border-radius: 5px;
+    width: 100%;
+
+    &::placeholder {
+      color: $color-gray-light;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 3px;
+    top: 15px;
+    width: 15px;
+    font-size: 13px;
+    color: $color-black-1;
+  }
+}
