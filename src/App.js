@@ -17,6 +17,7 @@ import {
 } from "./utils/constants";
 import { useState } from "react";
 import Modal from "./components/Modal";
+import OptionBtn from "./components/OptionBtn";
 
 function App() {
   const [openSearch, setOpenSearch] = useState(false);
@@ -196,6 +197,7 @@ function App() {
 
       <Footer></Footer>
       <Modal isOpenModal={openModal} onCloseModal={() => setOpenModal(false)} />
+      <OptionBtn></OptionBtn>
     </div>
   );
 }

@@ -9,6 +9,7 @@
 @import "./components/postcard";
 @import "./components/input";
 @import "./components/modal";
+@import "./components/optionbtn";
 
 img {
   display: block;
@@ -49,6 +50,7 @@ html {
 button {
   border: none;
   outline: none;
+  background: transparent;
 }
 
 ul {

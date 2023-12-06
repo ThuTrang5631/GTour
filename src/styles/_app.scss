@@ -46,6 +46,11 @@
       width: 100%;
     }
 
+    .hero__desc,
+    .hero__title {
+      text-align: center;
+    }
+
     .hero__desc {
       @include textMedium($color-white, 15px);
       margin-bottom: 20px;

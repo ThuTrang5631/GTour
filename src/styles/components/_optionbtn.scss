@@ -1,0 +1,36 @@
+.optionbtn__wrap {
+  position: fixed;
+  z-index: 500;
+  top: 150px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 5px 0 0 5px;
+  padding-block: 10px;
+
+  .optionbtn__btn {
+    padding: 0;
+    color: $color-black;
+
+    i {
+      font-size: 15px;
+    }
+  }
+
+  .optionbtn__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .optionbtn__wrap {
+    display: none;
+  }
+}
