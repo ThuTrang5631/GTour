@@ -27,8 +27,6 @@ const ModalOption = () => {
       card.id === id ? { ...card, isHover } : card
     );
 
-    console.log("cardsdata", updateCards);
-
     setCardsData(updateCards);
   };
 

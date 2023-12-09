@@ -1,16 +1,43 @@
 import logoLight from "../../assets/logo__light.png";
+import logoDark from "../../assets/logo__dark.png";
 import Dropdown from "react-multilevel-dropdown";
+import { useEffect, useState } from "react";
 
 const Header = ({ className, openModal }) => {
+  const [classHeaderScroll, setclassHeaderScroll] = useState(false);
+
+  const handleWhenScroll = () => {
+    if (window.pageYOffset === 0) {
+      setclassHeaderScroll(false);
+    } else {
+      setclassHeaderScroll(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleWhenScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleWhenScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className={`header padding-inwrap ${className}`}>
+      <header
+        className={`header padding-inwrap ${
+          classHeaderScroll && "headerscroll"
+        } ${className}`}
+      >
         <div className="header__wrapleft">
           <a
             className="header__logo"
             href="https://themes.themegoods.com/grandtour/demo/"
           >
-            <img src={logoLight} alt="logo"></img>
+            <img
+              src={classHeaderScroll ? logoDark : logoLight}
+              alt="logo"
+            ></img>
           </a>
         </div>
         <div className="header__wrapright">

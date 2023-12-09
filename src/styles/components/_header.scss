@@ -87,6 +87,21 @@
   }
 }
 
+.headerscroll {
+  background-color: $color-white;
+  z-index: 10000;
+
+  .header__btn {
+    i {
+      color: $color-black;
+    }
+  }
+
+  .header__menuitemlink {
+    color: $color-black;
+  }
+}
+
 // TABLET
 
 @media screen and (max-width: $breakpoint-lg) {
