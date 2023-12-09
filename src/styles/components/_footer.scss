@@ -61,7 +61,7 @@
       border-radius: 50%;
       text-align: center;
       height: 40px;
-      display: flex;
+      @include flexRow();
       justify-content: center;
       align-items: center;
 

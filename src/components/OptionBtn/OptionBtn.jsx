@@ -1,9 +1,13 @@
-const OptionBtn = () => {
+const OptionBtn = ({ onClick, style }) => {
   return (
-    <div className="optionbtn__wrap">
+    <div className="optionbtn__wrap" style={style}>
       <ul className="optionbtn">
         <li className="optionbtn__item">
-          <button className="optionbtn__btn" title="Choose Theme Styling">
+          <button
+            onClick={onClick}
+            className="optionbtn__btn"
+            title="Choose Theme Styling"
+          >
             <i className="fa-solid fa-gear"></i>
           </button>
         </li>

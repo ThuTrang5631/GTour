@@ -13,6 +13,10 @@ import parisImage from "../assets/Paris.jpg";
 import londonImage from "../assets/London.jpg";
 import modalTripCard1Image from "../assets/modaltripcard1.jpeg";
 import modalTripCard2Image from "../assets/modaltripcard2.jpeg";
+import modalOptionImage1 from "../assets/modaloption1.jpg";
+import modalOptionImage2 from "../assets/modaloption2.jpg";
+import modalOptionImage3 from "../assets/modaloption3.jpg";
+import modalOptionImage4 from "../assets/modaloption4.jpg";
 
 export const LISTMONTHS = [
   "Any Month",
@@ -667,7 +671,110 @@ export const DATAMENU = [
   },
 ];
 
-// "Shop Fullwidth",
-// "Shop Sidebar",
-// "Single Product Fullwidth",
-// "Single Product With Sidebar",
+export const LISTCOLORMODALOPTION = [
+  {
+    color: "#FF4A52",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=red",
+  },
+  {
+    color: "#FF9500",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=orange",
+  },
+  {
+    color: "#FFCC00",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=yellow",
+  },
+  {
+    color: "#4CD964",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=green",
+  },
+  {
+    color: "#5AC8FA",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=teal_blue",
+  },
+  {
+    color: "#007AFF",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=blue",
+  },
+  {
+    color: "#5856D6",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=purple",
+  },
+  {
+    color: "#FF2D55",
+    href: "https://themes.themegoods.com/grandtour/demo/?styling=pink",
+  },
+];
+
+export const LISTCARD = [
+  {
+    id: 0,
+    src: modalOptionImage1,
+    title: "Demo 1",
+    href: "https://themes.themegoods.com/grandtour/demo",
+    isHover: false,
+  },
+  {
+    id: 1,
+    src: modalOptionImage2,
+    title: "Demo 2",
+    href: "https://themes.themegoods.com/grandtour/demo2",
+    isHover: false,
+  },
+  {
+    id: 2,
+    src: modalOptionImage1,
+    title: "Left Align Menu",
+    href: "https://themes.themegoods.com/grandtour/demo/",
+    isHover: false,
+  },
+  {
+    id: 3,
+    src: modalOptionImage1,
+    title: "Center Align",
+    href: "https://themes.themegoods.com/grandtour/demo/?menulayout=centeralign",
+    isHover: false,
+  },
+  {
+    id: 4,
+    src: modalOptionImage1,
+    title: "Center Logo + 2 Menus",
+    href: "https://themes.themegoods.com/grandtour/demo/?menulayout=centeralogo",
+    isHover: false,
+  },
+  {
+    id: 5,
+    src: modalOptionImage3,
+    title: "Fullscreen Menu",
+    href: "https://themes.themegoods.com/grandtour/demo/?menulayout=hammenufull",
+    isHover: false,
+  },
+  {
+    id: 6,
+    src: modalOptionImage4,
+    title: "Side Menu",
+    href: "https://themes.themegoods.com/grandtour/demo/?menulayout=hammenuside",
+    isHover: false,
+  },
+  {
+    id: 7,
+    src: modalOptionImage1,
+    title: "With Frame",
+    href: "https://themes.themegoods.com/grandtour/demo/?frame=1",
+    isHover: false,
+  },
+  {
+    id: 8,
+    src: modalOptionImage1,
+    title: "Boxed Layout",
+    href: "https://themes.themegoods.com/grandtour/demo/?boxed=1",
+    isHover: false,
+  },
+  {
+    id: 9,
+    src: modalOptionImage1,
+    title: "With Top Bar",
+    href: "https://themes.themegoods.com/grandtour/demo/?topbar=1",
+    isHover: false,
+  },
+];

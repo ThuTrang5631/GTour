@@ -18,18 +18,16 @@ import {
 import { useState } from "react";
 import Modal from "./components/Modal";
 import OptionBtn from "./components/OptionBtn";
+import ModalOption from "./components/ModalOption/ModalOption";
 
 function App() {
   const [openSearch, setOpenSearch] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [openModalOption, setOpenModalOption] = useState(false);
 
   const handleOpenSearch = (e) => {
     e.preventDefault();
-    if (openSearch) {
-      setOpenSearch(false);
-    } else {
-      setOpenSearch(true);
-    }
+    setOpenSearch(!openSearch);
   };
 
   return (
@@ -106,7 +104,6 @@ function App() {
           </form>
         </div>
       </section>
-
       <section className="populardestinations padding-inwrap mb-50">
         <h2 className="populardestinations__content titleh2">
           Popular Destinations
@@ -197,7 +194,13 @@ function App() {
 
       <Footer></Footer>
       <Modal isOpenModal={openModal} onCloseModal={() => setOpenModal(false)} />
-      <OptionBtn></OptionBtn>
+      <section className="modal__optionsection">
+        <OptionBtn
+          onClick={() => setOpenModalOption(!openModalOption)}
+          style={{ right: openModalOption ? "370px" : "0px" }}
+        ></OptionBtn>
+        {openModalOption && <ModalOption></ModalOption>}
+      </section>
     </div>
   );
 }

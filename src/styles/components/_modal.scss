@@ -1,7 +1,6 @@
 .modal__wrap {
   bottom: 0;
-  display: flex;
-  flex-direction: column;
+  @include flexColum();
   height: 100%;
   overflow-y: hidden;
   position: fixed;
@@ -15,10 +14,9 @@
     width: 360px;
     background-color: $color-modal;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-    display: flex;
+    @include flexColum();
     overflow: auto;
     height: 100%;
-    flex-direction: column;
     padding: 35px 40px;
     position: relative;
     overflow: auto;
@@ -32,7 +30,7 @@
   }
 
   .modal__btn {
-    display: flex;
+    @include flexRow();
     justify-content: flex-end;
   }
 
@@ -45,7 +43,7 @@
   .modal__btnclose {
     width: 40px;
     height: 40px;
-    display: flex;
+    @include flexRow();
     justify-content: center;
     align-items: center;
     background-color: $color-red;

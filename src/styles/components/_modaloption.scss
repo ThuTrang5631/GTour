@@ -1,0 +1,103 @@
+.modaloption {
+  position: fixed;
+  right: 0;
+  background-color: $color-white;
+  width: 370px;
+  top: 0;
+  height: 100vh;
+  padding: 25px 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .modaloption__title {
+    @include textSemiBold($color-black, 15px);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .modaloption__desc {
+    @include textMedium($color-black, 12px);
+    text-align: center;
+    padding-inline: 10px;
+  }
+
+  .modaloption__top {
+    margin-bottom: 20px;
+  }
+
+  .modaloption__list {
+    @include flexRow();
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+    li {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .modaloption__item {
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  .modaloption__listcolor {
+    margin-top: 20px;
+  }
+
+  .modaloption__coloritem {
+    width: 30px;
+    height: 30px;
+    border-radius: 250px;
+  }
+
+  .modaloption__liststyle {
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+.hovercard {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 0 10%;
+  @include flexRow();
+  align-items: center;
+  justify-content: center;
+
+  .hovercard__title {
+    @include textBold($color-white, 12px);
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .hovercard__btn {
+    border-radius: 5px;
+    border: 2px solid $color-white;
+    @include textBold($color-white, 12px);
+    text-align: center;
+    padding: 5px 10px;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+
+  .hovercard__wrap {
+    @include flexColum();
+    align-items: center;
+  }
+}

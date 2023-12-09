@@ -2,15 +2,12 @@ import TripCard from "../TripCard";
 import { TRIPCARDLISTMODAL, DATAMENU } from "../../utils/constants";
 import { useState } from "react";
 
-let menuClick;
-
 const Modal = ({ isOpenModal, onCloseModal }) => {
   const [openSubmenu, setOpenSubmenu] = useState(false);
   const [menuClick, setMenuClick] = useState(NaN);
 
   const handleMenuClick = (item) => {
     setOpenSubmenu(true);
-    // menuClick = item;
     setMenuClick(item);
     console.log("menuclick", menuClick);
     console.log("datamenuclick", DATAMENU[menuClick]);

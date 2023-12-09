@@ -2,8 +2,7 @@
   position: fixed;
   z-index: 500;
   top: 150px;
-  right: 0;
-  display: flex;
+  @include flexRow();
   justify-content: center;
   width: 40px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
@@ -26,11 +25,5 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-}
-
-@media screen and (max-width: $breakpoint-md) {
-  .optionbtn__wrap {
-    display: none;
   }
 }
