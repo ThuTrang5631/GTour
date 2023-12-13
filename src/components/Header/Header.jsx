@@ -1,8 +1,7 @@
 import logoLight from "../../assets/logo__light.png";
 import logoDark from "../../assets/logo__dark.png";
-import Dropdown from "react-multilevel-dropdown";
 import { useEffect, useState } from "react";
-import { DATAMENU, LISTCARD } from "../../utils/constants";
+import { DATAMENU } from "../../utils/constants";
 
 const Header = ({ className, openModal }) => {
   const [classHeaderScroll, setclassHeaderScroll] = useState(false);

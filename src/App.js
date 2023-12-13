@@ -15,20 +15,52 @@ import {
   LISTREASONCARD,
   LISTVALUETRIPS,
 } from "./utils/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./components/Modal";
 import OptionBtn from "./components/OptionBtn";
 import ModalOption from "./components/ModalOption/ModalOption";
+
+const ButtonScroll = ({ onClick }) => {
+  return (
+    <button className="buttonscroll hover-card" onClick={onClick}>
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+  );
+};
 
 function App() {
   const [openSearch, setOpenSearch] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [openModalOption, setOpenModalOption] = useState(false);
+  const [openButtonScroll, setOpenButtonScroll] = useState(false);
 
   const handleOpenSearch = (e) => {
     e.preventDefault();
     setOpenSearch(!openSearch);
   };
+
+  const handleButtonScroll = () => {
+    if (window.pageYOffset === 0) {
+      setOpenButtonScroll(false);
+    } else {
+      setOpenButtonScroll(true);
+    }
+  };
+
+  const handleClickButtonScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleButtonScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleButtonScroll);
+    };
+  }, []);
 
   return (
     <div className="app">
@@ -201,6 +233,9 @@ function App() {
         ></OptionBtn>
         {openModalOption && <ModalOption></ModalOption>}
       </section>
+      {openButtonScroll && (
+        <ButtonScroll onClick={handleClickButtonScroll}></ButtonScroll>
+      )}
     </div>
   );
 }

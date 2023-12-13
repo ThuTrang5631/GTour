@@ -134,6 +134,21 @@
       margin-top: 25px;
     }
   }
+
+  .buttonscroll {
+    background-color: $color-blue-star;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+
+    i {
+      color: $color-white;
+      font-size: 20px;
+    }
+  }
 }
 
 //MOBILE
