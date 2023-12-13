@@ -8,6 +8,7 @@
   padding: 25px 15px;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 400;
 
   .modaloption__title {
     @include textSemiBold($color-black, 15px);

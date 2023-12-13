@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="app">
-      <section className="hero">
+      <section className="hero mb-50">
         <iframe
           className="hero__bg"
           src="https://www.youtube.com/embed/JPe2mwq96cw?autoplay=1&controls=0&loop=1&mute=1&autohide=0&modestbranding=1"
