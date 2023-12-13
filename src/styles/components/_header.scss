@@ -2,6 +2,7 @@
   @include flexRow();
   justify-content: space-between;
   padding-block: 26px;
+  z-index: 50;
 
   .header__logo {
     img {

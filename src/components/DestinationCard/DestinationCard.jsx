@@ -1,7 +1,7 @@
 const DestinationCard = ({ href, backgroundImage, content }) => {
   return (
     <a
-      className="destinationcard"
+      className="destinationcard hover-card"
       href={href}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >

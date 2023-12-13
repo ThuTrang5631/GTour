@@ -35,7 +35,10 @@ const TripCard = ({
   };
 
   return (
-    <a className={`tripcard ${className ? className : ""}`} href={href}>
+    <a
+      className={`tripcard hover-card ${className ? className : ""}`}
+      href={href}
+    >
       <div className="tripcard__top" style={isModal && { marginBottom: "0" }}>
         <img
           className={`tripcard__image ${isModal ? "modal__image" : ""}`}

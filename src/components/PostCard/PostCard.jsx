@@ -1,8 +1,6 @@
-import postCardImage1 from "../../assets/postcardimage1.jpg";
-
 const PostCard = ({ href, title, desc, dates, src }) => {
   return (
-    <a className="postcard" href={href}>
+    <a className="postcard hover-card" href={href}>
       <div className="postcard__top">
         <img src={src} alt="postcard"></img>
       </div>

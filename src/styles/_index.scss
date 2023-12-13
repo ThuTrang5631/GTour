@@ -83,6 +83,15 @@ a {
   margin-bottom: 50px;
 }
 
+.hover-card {
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
 @media screen and (max-width: $breakpoint-lg) {
   .padding-inwrap {
     padding-inline: 30px;
