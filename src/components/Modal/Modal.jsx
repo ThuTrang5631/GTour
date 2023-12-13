@@ -9,8 +9,6 @@ const Modal = ({ isOpenModal, onCloseModal }) => {
   const handleMenuClick = (item) => {
     setOpenSubmenu(true);
     setMenuClick(item);
-    console.log("menuclick", menuClick);
-    console.log("datamenuclick", DATAMENU[menuClick]);
   };
 
   return (

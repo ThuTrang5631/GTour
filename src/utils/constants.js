@@ -172,85 +172,6 @@ export const LISTARTICLE = [
   },
 ];
 
-export const HOME = [
-  "Home 1 - Background Image",
-  "Home 2 - Youtube Video",
-  "Home 3 - Google Inspired",
-  "Home 4 - Travel Site",
-];
-
-export const TOURS = [
-  "Tour Classic Fullwidth",
-  "Tour Classic Sidebar",
-  "Tour Grid Fullwidth",
-  "Tour Grid Sidebar",
-  "Tour List Sidebar",
-  "Tour Header Type",
-  "Tour Categories",
-];
-
-export const BOOKING = [
-  "Online Payment for Booking",
-  "Custom Booking Form",
-  "Tour Durations",
-  "Custom Booking URL for Affiliate Tour",
-  "Custom Booking using custom HTML & Shortcode",
-  "Header Options",
-  "Layout Options",
-];
-
-export const DESTINATIONS = [
-  "Destination Fullwidth",
-  "Destination + Video Header",
-  "Destination Right Sidebar",
-  "Destination Left SideBar",
-  "Single Destination",
-  "Single Destination + Video",
-];
-
-export const PAGES = [
-  "About Us",
-  "Contact Us",
-  "FAQs",
-  "Gallery",
-  "Page Fullwidth",
-  "Page + Video Background Header",
-  "Page Right Sidebar",
-  "Page Left Sidebar",
-];
-
-export const BLOGS = [
-  "Blog Right Sidebar",
-  "Blog Left Sidebar",
-  "Blog Fullwidth",
-  "Blog Grid Right Sidebar",
-  "Blog Grid Left Sidebar",
-  "Blog Frid Fullwidth",
-  "Blog Full + Grid Right Sidebar",
-  "Blog Full + Grid Left Sidebar",
-  "Blog Full + Grid Fullwidth",
-];
-
-export const SHORTCODES = [
-  "Accordion & Toggles",
-  "Alert Boxes",
-  "Animated Content",
-  "Buttons & Social Icons",
-  "Columns",
-  "Google Maps",
-  "Image Frame & Animation",
-  "Image Teasers",
-  "Pricing Tables",
-  "Tabs",
-];
-
-export const SHOP = [
-  "Shop Fullwidth",
-  "Shop Sidebar",
-  "Single Product Fullwidth",
-  "Single Product With Sidebar",
-];
-
 export const TRIPCARDLISTMODAL = [
   {
     src: modalTripCard1Image,
@@ -279,33 +200,39 @@ export const DATAMENU = [
   {
     id: 0,
     title: "Home",
+    isHover: false,
     submenu1: [
       {
         title: "Home 1 - Background Image",
         url: "https://themes.themegoods.com/grandtour/demo/",
+        submenu2: null,
       },
       {
         title: "Home 2 - Youtube Video",
         url: "https://themes.themegoods.com/grandtour/demo/home-2/",
+        submenu2: null,
       },
       {
         title: "Home 3 - Google Inspired",
         url: "https://themes.themegoods.com/grandtour/demo/home-3-google-inspired/",
+        submenu2: null,
       },
       {
         title: "Home 4 - Travel Site",
         url: "https://themes.themegoods.com/grandtour/demo/home-4-travel-site/",
+        submenu2: null,
       },
     ],
   },
   {
     id: 1,
     title: "Tours",
+    isHover: false,
     submenu1: [
       {
         title: "Tour Classic Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-3-columns-classic/",
-
+        isHover: false,
         submenu2: [
           {
             title: "2 Columns",
@@ -324,6 +251,7 @@ export const DATAMENU = [
       {
         title: "Tour Classic Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-2-columns-classic-right-sidebar/",
+        isHover: false,
         submenu2: [
           {
             title: "Right Sidebar",
@@ -338,6 +266,7 @@ export const DATAMENU = [
       {
         title: "Tour Grid Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-3-columns-grid/",
+        isHover: false,
         submenu2: [
           {
             title: "2 Columns",
@@ -356,6 +285,7 @@ export const DATAMENU = [
       {
         title: "Tour Grid Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-grid-right-sidebar/",
+        isHover: false,
         submenu2: [
           {
             title: "Right Sidebar",
@@ -370,6 +300,7 @@ export const DATAMENU = [
       {
         title: "Tour Header Type",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-3-columns-grid/",
+        isHover: false,
         submenu2: [
           {
             title: "Featured Image",
@@ -384,6 +315,7 @@ export const DATAMENU = [
       {
         title: "Tour Categories",
         url: "#",
+        isHover: false,
         submenu2: [
           {
             title: "Rural",
@@ -408,10 +340,12 @@ export const DATAMENU = [
   {
     id: 2,
     title: "Booking",
+    isHover: false,
     submenu1: [
       {
         title: "Online Payment for Booking",
         url: "#",
+        isHover: false,
         submenu2: [
           {
             title: "Variable Tour Pricing",
@@ -426,6 +360,7 @@ export const DATAMENU = [
       {
         title: "Custom Booking Form",
         url: "#",
+        isHover: false,
         submenu2: [
           {
             title: "Booking Form + Sub Tour Date",
@@ -440,6 +375,7 @@ export const DATAMENU = [
       {
         title: "Tour Durations",
         url: "#",
+        isHover: false,
         submenu2: [
           {
             title: "Single Day Tour",
@@ -464,6 +400,7 @@ export const DATAMENU = [
       {
         title: "Header Options",
         url: "#",
+        isHover: false,
         submenu2: [
           {
             title: "Standard Background Header",
@@ -478,6 +415,7 @@ export const DATAMENU = [
       {
         title: "Layout Options",
         url: "#",
+        isHover: false,
         submenu2: [
           {
             title: "With Sidebar",
@@ -494,178 +432,220 @@ export const DATAMENU = [
   {
     id: 3,
     title: "Destinations",
+    isHover: false,
     submenu1: [
       {
         title: "Destination Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/destination-fullwidth/",
+        submenu2: null,
       },
       {
         title: "Destination + Video Header",
         url: "https://themes.themegoods.com/grandtour/demo/destination-video-header/",
+        submenu2: null,
       },
       {
         title: "Destination Right Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/destination-right-sidebar/",
+        submenu2: null,
       },
       {
         title: "Destination Left Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/destination-left-sidebar/",
+        submenu2: null,
       },
       {
         title: "Single Destination",
         url: "https://themes.themegoods.com/grandtour/demo/destination/venice/",
+        submenu2: null,
       },
       {
         title: "Single Destination + Video",
         url: "https://themes.themegoods.com/grandtour/demo/destination/paris/",
+        submenu2: null,
       },
     ],
   },
   {
     id: 4,
     title: "Pages",
+    isHover: false,
     submenu1: [
       {
         title: "About Us",
         url: "https://themes.themegoods.com/grandtour/demo/about-us/",
+        submenu2: null,
       },
       {
         title: "Contact Us",
         url: "https://themes.themegoods.com/grandtour/demo/contact-us/",
+        submenu2: null,
       },
       {
         title: "FAQs",
         url: "https://themes.themegoods.com/grandtour/demo/faqs/",
+        submenu2: null,
       },
       {
         title: "Gallery",
         url: "https://themes.themegoods.com/grandtour/demo/galleries/gallery/",
+        submenu2: null,
       },
       {
         title: "Page Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/page-fullwidth/",
+        submenu2: null,
       },
       {
         title: "Page + Video Background Header",
         url: "https://themes.themegoods.com/grandtour/demo/page-video-header/",
+        submenu2: null,
       },
       {
         title: "Page Right Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/page-right-sidebar/",
+        submenu2: null,
       },
       {
         title: "Page Left Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/page-left-sidebar/",
+        submenu2: null,
       },
     ],
   },
   {
     id: 5,
     title: "Blog",
+    isHover: false,
     submenu1: [
       {
         title: "Blog Right Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Left Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Fullwidth",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Grid Right Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Grid Left Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Frid Fullwidth",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Full + Grid Right Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Full + Grid Left Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Blog Full + Grid Fullwidth",
         url: "#",
+        submenu2: null,
       },
     ],
   },
   {
     id: 6,
     title: "Shortcodes",
+    isHover: false,
     submenu1: [
       {
         title: "Accordion & Toggles",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Alert Boxes",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Animated Content",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Buttons & Social Icons",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Columns",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Google Maps",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Image Frame & Animation",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Image Teasers",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Pricing Tables",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Tabs",
         url: "#",
+        submenu2: null,
       },
     ],
   },
   {
     id: 7,
     title: "Shop",
+    isHover: false,
     submenu1: [
       {
         title: "Shop Fullwidth",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Shop Sidebar",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Single Product Fullwidth",
         url: "#",
+        submenu2: null,
       },
       {
         title: "Single Product With Sidebar",
         url: "#",
+        submenu2: null,
       },
     ],
   },

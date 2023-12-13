@@ -70,19 +70,31 @@
   .header__submenu {
     background-color: $color-white;
     border-radius: 5px;
+    margin-left: -15px;
     position: absolute;
     z-index: 10;
     width: 240px;
-    margin-top: 20px;
+    margin-top: 6px;
     padding-inline: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     a {
       @include textMedium($color-black, 13px);
+
+      &:hover {
+        color: $color-red;
+      }
     }
 
     .header__submenuitem {
       padding-block: 10px;
       border-bottom: 1px solid #dce0e0;
+      @include flexRow();
+      justify-content: space-between;
+
+      i {
+        font-size: 10px;
+      }
     }
   }
 }

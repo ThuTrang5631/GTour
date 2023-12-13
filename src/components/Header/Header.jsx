@@ -2,9 +2,11 @@ import logoLight from "../../assets/logo__light.png";
 import logoDark from "../../assets/logo__dark.png";
 import Dropdown from "react-multilevel-dropdown";
 import { useEffect, useState } from "react";
+import { DATAMENU, LISTCARD } from "../../utils/constants";
 
 const Header = ({ className, openModal }) => {
   const [classHeaderScroll, setclassHeaderScroll] = useState(false);
+  const [dataMenu, setDataMenu] = useState(DATAMENU);
 
   const handleWhenScroll = () => {
     if (window.pageYOffset === 0) {
@@ -12,6 +14,22 @@ const Header = ({ className, openModal }) => {
     } else {
       setclassHeaderScroll(true);
     }
+  };
+
+  const handleHover = (id) => {
+    const updateCards = dataMenu.map((item) =>
+      item.id === id ? { ...item, isHover: true } : item
+    );
+
+    setDataMenu(updateCards);
+  };
+
+  console.log("dataMenu", dataMenu);
+
+  const handleHoverLeave = () => {
+    setDataMenu(DATAMENU);
+
+    console.log("dataMenu", dataMenu);
   };
 
   useEffect(() => {
@@ -42,74 +60,38 @@ const Header = ({ className, openModal }) => {
         </div>
         <div className="header__wrapright">
           <ul className="header__menu">
-            <li className="header__menuitem">
-              <a
-                className="header__menuitemlink"
-                href="https://themes.themegoods.com/grandtour/demo/"
-              >
-                Home
-              </a>
-              <ul className="header__submenu">
-                <li className="header__submenuitem">
-                  <a href="https://themes.themegoods.com/grandtour/demo/">
-                    Home 1 - Background Image
+            {dataMenu.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="header__menuitem"
+                  onMouseLeave={() => handleHoverLeave()}
+                >
+                  <a
+                    href={item.href}
+                    className="header__menuitemlink"
+                    onMouseOver={() => handleHover(item.id)}
+                    onClick={() => handleHover(item.id)}
+                  >
+                    {item.title}
                   </a>
+                  {item.isHover && item.submenu1.length && (
+                    <ul className="header__submenu">
+                      {item.submenu1.map((item, index) => {
+                        return (
+                          <li key={index} className="header__submenuitem">
+                            <a href={item.url}>{item.title}</a>
+                            {item.submenu2 && (
+                              <i className="fa-solid fa-angle-right"></i>
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </li>
-                <li className="header__submenuitem">
-                  <a href="https://themes.themegoods.com/grandtour/demo/">
-                    Home 1 - Background Image
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="header__menuitem">
-              <a href="#" className="header__menuitemlink">
-                Tours
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
-            <li className="header__menuitem">
-              <a
-                className="header__menuitemlink"
-                href="https://themes.themegoods.com/grandtour/demo/tour/the-new-california/"
-              >
-                Booking
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
-            <li className="header__menuitem">
-              <a className="header__menuitemlink" href="#">
-                Destinations
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
-            <li className="header__menuitem">
-              <a className="header__menuitemlink" href="#">
-                Pages
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
-            <li className="header__menuitem">
-              <a className="header__menuitemlink" href="#">
-                Blog
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
-            <li className="header__menuitem">
-              <a className="header__menuitemlink" href="#">
-                Shortcodes
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
-            <li className="header__menuitem">
-              <a
-                className="header__menuitemlink"
-                href="https://themes.themegoods.com/grandtour/demo/shop/"
-              >
-                Shop
-              </a>
-              <ul className="header__submenu"></ul>
-            </li>
+              );
+            })}
           </ul>
           <div className="header__button">
             <button className="header__btn" onClick={openModal}>
