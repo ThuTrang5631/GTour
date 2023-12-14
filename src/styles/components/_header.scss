@@ -92,9 +92,14 @@
       border-bottom: 1px solid #dce0e0;
       @include flexRow();
       justify-content: space-between;
+      cursor: pointer;
 
       i {
         font-size: 10px;
+      }
+
+      &:hover {
+        color: $color-red;
       }
     }
   }

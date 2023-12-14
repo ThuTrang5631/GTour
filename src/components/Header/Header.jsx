@@ -23,12 +23,28 @@ const Header = ({ className, openModal }) => {
     setDataMenu(updateCards);
   };
 
-  console.log("dataMenu", dataMenu);
+  const handleHoverSubmenu1 = (id, isHover) => {
+    const updateCards = dataMenu.map((item) => {
+      if (item.submenu1) {
+        // map every item in submenu1 and if id suitable => connect and change isHover is true
+        const updateSubmenu1 = item.submenu1.map((itemSub) =>
+          itemSub.id === id ? { ...itemSub, isHover: isHover } : itemSub
+        );
+
+        // map every item and connect them and change property new submenu1
+
+        return {
+          ...item,
+          submenu1: updateSubmenu1,
+        };
+      }
+    });
+
+    setDataMenu(updateCards);
+  };
 
   const handleHoverLeave = () => {
     setDataMenu(DATAMENU);
-
-    console.log("dataMenu", dataMenu);
   };
 
   useEffect(() => {
@@ -78,10 +94,45 @@ const Header = ({ className, openModal }) => {
                     <ul className="header__submenu">
                       {item.submenu1.map((item, index) => {
                         return (
-                          <li key={index} className="header__submenuitem">
-                            <a href={item.url}>{item.title}</a>
+                          <li
+                            key={index}
+                            className="header__submenuitem"
+                            onMouseLeave={() =>
+                              handleHoverSubmenu1(item.id, false)
+                            }
+                            style={item.submenu2 && { position: "relative" }}
+                          >
+                            <a
+                              onMouseOver={() =>
+                                handleHoverSubmenu1(item.id, true)
+                              }
+                              href={item.url}
+                            >
+                              {item.title}
+                            </a>
                             {item.submenu2 && (
                               <i className="fa-solid fa-angle-right"></i>
+                            )}
+                            {item.isHover && item.submenu2 && (
+                              <ul
+                                className="header__submenu"
+                                style={{
+                                  marginTop: "0px",
+                                  right: "-262px",
+                                  top: "0",
+                                }}
+                              >
+                                {item.submenu2.map((item, index) => {
+                                  return (
+                                    <li
+                                      key={index}
+                                      className="header__submenuitem"
+                                    >
+                                      <a href={item.url}>{item.title}</a>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
                             )}
                           </li>
                         );

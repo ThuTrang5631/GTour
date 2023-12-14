@@ -201,23 +201,28 @@ export const DATAMENU = [
     id: 0,
     title: "Home",
     isHover: false,
+    href: "https://themes.themegoods.com/grandtour/demo/",
     submenu1: [
       {
+        id: 0,
         title: "Home 1 - Background Image",
         url: "https://themes.themegoods.com/grandtour/demo/",
         submenu2: null,
       },
       {
+        id: 1,
         title: "Home 2 - Youtube Video",
         url: "https://themes.themegoods.com/grandtour/demo/home-2/",
         submenu2: null,
       },
       {
+        id: 2,
         title: "Home 3 - Google Inspired",
         url: "https://themes.themegoods.com/grandtour/demo/home-3-google-inspired/",
         submenu2: null,
       },
       {
+        id: 3,
         title: "Home 4 - Travel Site",
         url: "https://themes.themegoods.com/grandtour/demo/home-4-travel-site/",
         submenu2: null,
@@ -228,8 +233,10 @@ export const DATAMENU = [
     id: 1,
     title: "Tours",
     isHover: false,
+    href: "#",
     submenu1: [
       {
+        id: 0,
         title: "Tour Classic Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-3-columns-classic/",
         isHover: false,
@@ -249,6 +256,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 1,
         title: "Tour Classic Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-2-columns-classic-right-sidebar/",
         isHover: false,
@@ -264,6 +272,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 2,
         title: "Tour Grid Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-3-columns-grid/",
         isHover: false,
@@ -283,6 +292,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 3,
         title: "Tour Grid Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-grid-right-sidebar/",
         isHover: false,
@@ -298,6 +308,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 4,
         title: "Tour Header Type",
         url: "https://themes.themegoods.com/grandtour/demo/tours/tour-3-columns-grid/",
         isHover: false,
@@ -313,6 +324,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 5,
         title: "Tour Categories",
         url: "#",
         isHover: false,
@@ -341,8 +353,10 @@ export const DATAMENU = [
     id: 2,
     title: "Booking",
     isHover: false,
+    href: "https://themes.themegoods.com/grandtour/demo/tour/the-new-california/",
     submenu1: [
       {
+        id: 0,
         title: "Online Payment for Booking",
         url: "#",
         isHover: false,
@@ -358,6 +372,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 1,
         title: "Custom Booking Form",
         url: "#",
         isHover: false,
@@ -373,6 +388,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 2,
         title: "Tour Durations",
         url: "#",
         isHover: false,
@@ -388,16 +404,19 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 3,
         title: "Custom Booking URL for Affiliate Tour",
         url: "https://themes.themegoods.com/grandtour/demo/tour/5-lake-of-fuji-san/",
         submenu2: null,
       },
       {
+        id: 4,
         title: "Custom Booking using custom HTML & Shortcode",
         url: "https://themes.themegoods.com/grandtour/demo/tour/exclusive-prague-trip/",
         submenu2: null,
       },
       {
+        id: 5,
         title: "Header Options",
         url: "#",
         isHover: false,
@@ -413,6 +432,7 @@ export const DATAMENU = [
         ],
       },
       {
+        id: 6,
         title: "Layout Options",
         url: "#",
         isHover: false,
@@ -433,33 +453,40 @@ export const DATAMENU = [
     id: 3,
     title: "Destinations",
     isHover: false,
+    href: "#",
     submenu1: [
       {
+        id: 0,
         title: "Destination Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/destination-fullwidth/",
         submenu2: null,
       },
       {
+        id: 1,
         title: "Destination + Video Header",
         url: "https://themes.themegoods.com/grandtour/demo/destination-video-header/",
         submenu2: null,
       },
       {
+        id: 2,
         title: "Destination Right Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/destination-right-sidebar/",
         submenu2: null,
       },
       {
+        id: 3,
         title: "Destination Left Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/destination-left-sidebar/",
         submenu2: null,
       },
       {
+        id: 4,
         title: "Single Destination",
         url: "https://themes.themegoods.com/grandtour/demo/destination/venice/",
         submenu2: null,
       },
       {
+        id: 5,
         title: "Single Destination + Video",
         url: "https://themes.themegoods.com/grandtour/demo/destination/paris/",
         submenu2: null,
@@ -470,38 +497,46 @@ export const DATAMENU = [
     id: 4,
     title: "Pages",
     isHover: false,
+    href: "#",
     submenu1: [
       {
+        id: 0,
         title: "About Us",
         url: "https://themes.themegoods.com/grandtour/demo/about-us/",
         submenu2: null,
       },
       {
+        id: 1,
         title: "Contact Us",
         url: "https://themes.themegoods.com/grandtour/demo/contact-us/",
         submenu2: null,
       },
       {
+        id: 2,
         title: "FAQs",
         url: "https://themes.themegoods.com/grandtour/demo/faqs/",
         submenu2: null,
       },
       {
+        id: 3,
         title: "Gallery",
         url: "https://themes.themegoods.com/grandtour/demo/galleries/gallery/",
         submenu2: null,
       },
       {
+        id: 4,
         title: "Page Fullwidth",
         url: "https://themes.themegoods.com/grandtour/demo/page-fullwidth/",
         submenu2: null,
       },
       {
+        id: 5,
         title: "Page + Video Background Header",
         url: "https://themes.themegoods.com/grandtour/demo/page-video-header/",
         submenu2: null,
       },
       {
+        id: 6,
         title: "Page Right Sidebar",
         url: "https://themes.themegoods.com/grandtour/demo/page-right-sidebar/",
         submenu2: null,
@@ -517,50 +552,51 @@ export const DATAMENU = [
     id: 5,
     title: "Blog",
     isHover: false,
+    href: "#",
     submenu1: [
       {
         title: "Blog Right Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-right-sidebar/",
         submenu2: null,
       },
       {
         title: "Blog Left Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-left-sidebar/",
         submenu2: null,
       },
       {
         title: "Blog Fullwidth",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-fullwidth/",
         submenu2: null,
       },
       {
         title: "Blog Grid Right Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-grid-right-sidebar/",
         submenu2: null,
       },
       {
         title: "Blog Grid Left Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-grid-left-sidebar/",
         submenu2: null,
       },
       {
         title: "Blog Frid Fullwidth",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-grid-fullwidth/",
         submenu2: null,
       },
       {
         title: "Blog Full + Grid Right Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-full-grid-right-sidebar/",
         submenu2: null,
       },
       {
         title: "Blog Full + Grid Left Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-full-grid-left-sidebar/",
         submenu2: null,
       },
       {
         title: "Blog Full + Grid Fullwidth",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/blog/blog-full-grid-fullwidth/",
         submenu2: null,
       },
     ],
@@ -569,55 +605,56 @@ export const DATAMENU = [
     id: 6,
     title: "Shortcodes",
     isHover: false,
+    href: "#",
     submenu1: [
       {
         title: "Accordion & Toggles",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/accordion-toggles/",
         submenu2: null,
       },
       {
         title: "Alert Boxes",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/alert-boxes/",
         submenu2: null,
       },
       {
         title: "Animated Content",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/animated-content/",
         submenu2: null,
       },
       {
         title: "Buttons & Social Icons",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/buttons-social-icons/",
         submenu2: null,
       },
       {
         title: "Columns",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/columns/",
         submenu2: null,
       },
       {
         title: "Google Maps",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/google-maps/",
         submenu2: null,
       },
       {
         title: "Image Frame & Animation",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/image-frame-animation/",
         submenu2: null,
       },
       {
         title: "Image Teasers",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/image-teasers/",
         submenu2: null,
       },
       {
         title: "Pricing Tables",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/pricing-tables/",
         submenu2: null,
       },
       {
         title: "Tabs",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shortcodes/tabs/",
         submenu2: null,
       },
     ],
@@ -626,25 +663,26 @@ export const DATAMENU = [
     id: 7,
     title: "Shop",
     isHover: false,
+    href: "https://themes.themegoods.com/grandtour/demo/shop/",
     submenu1: [
       {
         title: "Shop Fullwidth",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shop/",
         submenu2: null,
       },
       {
         title: "Shop Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shop/?sidebar=1",
         submenu2: null,
       },
       {
         title: "Single Product Fullwidth",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shop/beach-shoe/",
         submenu2: null,
       },
       {
         title: "Single Product With Sidebar",
-        url: "#",
+        url: "https://themes.themegoods.com/grandtour/demo/shop/safety-set/?sidebar=1",
         submenu2: null,
       },
     ],
