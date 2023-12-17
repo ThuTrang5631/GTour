@@ -23,7 +23,7 @@ import ModalOption from "./components/ModalOption/ModalOption";
 const ButtonScroll = ({ onClick }) => {
   return (
     <button className="buttonscroll hover-card" onClick={onClick}>
-      <i class="fa-solid fa-angle-up"></i>
+      <i className="fa-solid fa-angle-up"></i>
     </button>
   );
 };
